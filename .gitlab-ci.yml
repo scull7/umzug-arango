@@ -15,6 +15,7 @@ test_integration:
   services:
     - name: arangodb:latest
       alias: arangodb
+      command: [ "export ARANGO_NO_AUTH=1" ]
   tags:
     - docker
   variables:

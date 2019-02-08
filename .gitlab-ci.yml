@@ -12,6 +12,7 @@ test_integration:
   script:
     - npm install
     - npm test
+  # https://github.com/biggora/caminte/blob/master/.gitlab-ci.yml
   services:
     - name: arangodb:latest
       alias: arangodb
@@ -20,4 +21,5 @@ test_integration:
     - docker
   variables:
     TEST_ARANGO_URL: "http://arangodb:8529"
+    ARANGO_NO_AUTH: "1"
   coverage: /^Statements\s*:\s*([^%]+)/

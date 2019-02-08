@@ -19,4 +19,4 @@ test_integration:
     - docker
   variables:
     TEST_ARANGO_URL: "http://arangodb:8529"
-  coverage: '^Statements\s*:\s*([^%]+)'
+  coverage: /^Statements\s*:\s*([^%]+)/

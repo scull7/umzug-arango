@@ -16,8 +16,8 @@ if (process.env.TEST_ARANGO_URL != null) {
 }
 
 test.before('Initialize test database', t => {
-  const mgr = new Database();
-  const tgt = new Database();
+  const mgr = new Database(OPTIONS);
+  const tgt = new Database(OPTIONS);
   tgt.useDatabase(TEST_DB);
 
   return tgt.exists()

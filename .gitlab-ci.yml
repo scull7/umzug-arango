@@ -1,0 +1,10 @@
+before_script:
+  - apt-get update && apt-get install nodejs
+
+services:
+  - name: arangodb:latest
+    alias: arangodb
+
+test:
+  script:
+    - npm test

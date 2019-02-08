@@ -1,10 +1,22 @@
-before_script:
-  - apt-get update && apt-get install nodejs
+image: node:lts
 
-services:
-  - name: arangodb:latest
-    alias: arangodb
+cache:
+  paths:
+    - node_modules/
 
-test:
+stages:
+  - test
+
+test_integration:
+  stage: test
   script:
+    - npm install
     - npm test
+  services:
+    - name: arangodb:latest
+      alias: arangodb
+  tags:
+    - docker
+  variables:
+    TEST_ARANGO_URL: "http://arangodb:8529"
+  coverage: '^Statements\s*:\s*([^%]+)'

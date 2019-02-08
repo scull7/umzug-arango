@@ -11,6 +11,10 @@ const OPTIONS = {
   collectionName: TEST_COLLECTION
 };
 
+if (process.env.TEST_ARANGO_URL != null) {
+  OPTIONS.url = process.env.TEST_ARANGO_URL;
+}
+
 test.before('Initialize test database', t => {
   const mgr = new Database();
   const tgt = new Database();

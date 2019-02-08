@@ -4,7 +4,9 @@
   "description": "ArangoDB custom storage backend for umzug",
   "main": "index.js",
   "scripts": {
-    "test": "nyc ava"
+    "test": "ava",
+    "test:coverage": "nyc npm test",
+    "test:ci": "nyc --reporter=lcov --reporter=text-summary npm test"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,36 @@
+{
+  "name": "@buckeye/umzug-arango",
+  "version": "1.0.0",
+  "description": "ArangoDB custom storage backend for umzug",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/scull7/umzug-arango.git"
+  },
+  "keywords": [
+    "umzug",
+    "migration",
+    "migrate",
+    "database",
+    "arango"
+  ],
+  "author": "Nathan A Sculli <scull7@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/scull7/umzug-arango/issues"
+  },
+  "homepage": "https://gitlab.com/scull7/umzug-arango#readme",
+  "dependencies": {
+    "arangojs": "^6.10.0",
+    "bluebird": "^3.5.3",
+    "ololog": "^1.1.117",
+    "redefine": "^0.2.1"
+  },
+  "devDependencies": {
+    "ava": "^1.2.1",
+    "nyc": "^13.2.0"
+  }
+}

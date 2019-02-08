@@ -26,7 +26,7 @@ test.before('Initialize test database', t => {
       : mgr.createDatabase(TEST_DB, [{ username: "root" }])
     )
     .then((info) => {
-      const db = new Database();
+      const db = new Database(OPTIONS);
       db.useDatabase(TEST_DB);
 
       const collection = db.collection(TEST_COLLECTION);
